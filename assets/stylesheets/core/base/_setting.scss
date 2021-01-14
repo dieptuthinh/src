@@ -1,0 +1,273 @@
+/* font-family other */
+
+// $ml: 'lato', sans-serif;
+$ml: 'Merriweather',
+sans-serif;
+$second-font: 'lato',
+sans-serif;
+$slick: 'slick';
+$icomoon: 'icomoon';
+
+/* font-family body */
+
+$font-family-base: $ml;
+$headings-font-family: $second-font !default;
+
+/* set screen */
+
+// variables gird
+$col-xs: 0;
+$col-sm: 481px;
+$col-md: 768px;
+$col-lg: 992px;
+// $col-sl: 1025px;
+$col-xl: 1200px;
+$col-xxl: 1366px;
+// variables max widths
+$media-sm: 100%;
+$media-md: 750px;
+$media-lg: 950px;
+$media-xl: 1140px;
+$media-xxl: 1200px;
+
+/* class bootstrap helper (d-md-none d-lg-none) */
+
+// $grid-breakpoints-custom: (xs: 0, md: $col-md, lg: $col-lg, sl:$col-sl);
+// $grid-breakpoints-mb: (xs: 0);
+// $grid-breakpoints-dt: (md: $col-md, lg: $col-lg, sl:$col-sl, xl: $col-xl);
+
+/* class media bootstrap reponsive helper @include media-breakpoint-up(xl) */
+
+// $grid-breakpoints-media: (xs: $col-xs, sm: $col-sm, md: $col-md, lg: $col-lg, xl: $col-xl);
+$grid-breakpoints: () !default;
+$grid-breakpoints: map-merge( ( xs: $col-xs, sm: $col-sm, md: $col-md, lg: $col-lg, xl: $col-xl), $grid-breakpoints);
+
+/* class gird (col-md-6, container max-width) */
+
+$container-max-widths: (sm: null, md: $media-md, lg: $media-lg);
+$grid-columns: 12 !default;
+$grid-gutter-width: 30px !default;
+// Color system
+$white: #fff !default;
+$gray-100: #fcfcfc !default;
+$gray-200: #f2f2f2 !default;
+$gray-300: #e4e4eb !default;
+$gray-400: #bbbbbb !default;
+$gray-500: #818181 !default;
+$gray-600: #686868 !default;
+$gray-700: #666666 !default;
+$gray-800: #4c4c4c !default;
+$gray-900: #464646 !default;
+$black: #211f26 !default;
+$grays: () !default;
+// stylelint-disable-next-line scss/dollar-variable-default
+$grays: map-merge( ( "100": $gray-100, "200": $gray-200, "300": $gray-300, "400": $gray-400, "500": $gray-500, "600": $gray-600, "700": $gray-700, "800": $gray-800, "900": $gray-900), $grays);
+// $blue:    #007bff !default;
+// $indigo:  #6610f2 !default;
+// $purple:  #6f42c1 !default;
+// $pink:    #e83e8c !default;
+// $red:     #dc3545 !default;
+// $orange:  #fd7e14 !default;
+// $yellow:  #ffc107 !default;
+$green: #009549 !default;
+// $teal:    #20c997 !default;
+// $cyan:    #17a2b8 !default;
+$colors: () !default;
+// stylelint-disable-next-line scss/dollar-variable-default
+$colors: map-merge( ( // "blue":       $blue,
+// "indigo":     $indigo,
+// "purple":     $purple,
+// "pink":       $pink,
+// "red":        $red,
+// "orange":     $orange,
+// "yellow":     $yellow,
+"green": $green, // "teal":       $teal,
+// "cyan":       $cyan,
+"white": $white, "gray": $gray-600, "gray-dark": $gray-900), $colors);
+$primary: $green !default;
+$secondary: $gray-500 !default;
+// $success:       $green !default;
+// $info:          $cyan !default;
+// $warning:       $yellow !default;
+// $danger:        $red !default;
+$light: $gray-200 !default;
+$dark: $black !default;
+$gray-dark: $gray-900;
+$theme-colors: () !default;
+// stylelint-disable-next-line scss/dollar-variable-default
+$theme-colors: map-merge( ( "primary": $primary, "secondary": $secondary, // "success":    $success,
+// "info":       $info,
+// "warning":    $warning,
+// "danger":     $danger,
+"light": $light, "gray-dark": $gray-dark, "dark": $dark), $theme-colors);
+$border-color: $gray-400 !default;
+
+/* body */
+
+$body-bg: $white !default;
+$body-color: $gray-500 !default;
+
+/* color heading */
+
+// set color for heading
+$color-h: $gray-900;
+$black: $gray-900 !default;
+$link-color: $green !default;
+$link-decoration: none !default;
+$link-hover-color: darken($link-color, 15%) !default;
+$link-hover-decoration: underline !default;
+// Paragraphs
+$paragraph-margin-bottom: 1rem;
+
+/* font size */
+
+@function rem($pixels, $context: 16) {
+    @if (unitless($pixels)) {
+        $pixels: $pixels * 1px;
+    }
+    @if (unitless($context)) {
+        $context: $context * 1px;
+    }
+    @return $pixels / $context * 1rem;
+}
+
+$font-b: 16;
+$fontpx: 16px;
+
+/* set style body */
+
+// $font-size-base : rem($font-b);
+// $line-height-base : (30/$font-b) !default;
+// $font-weight-base : 400;
+
+/* font heading */
+
+$h1-font-size: rem(30) !default;
+$h2-font-size: rem(28) !default;
+$h3-font-size: rem(20) !default;
+$h4-font-size: rem(16) !default;
+// $h5-font-size : rem(14) !default;
+// $h6-font-size : rem(16) !default;
+
+/* heading custom */
+
+// $headings-margin-bottom: 1rem !default;
+// $headings-font-family: inherit !default;
+// $headings-font-weight: inherit !default;
+// $headings-line-height: 1.4 !default;
+// $headings-color: inherit !default;
+
+/* .form-control */
+
+// $input-btn-padding-y: rem(17);
+// $input-btn-padding-x: rem(20);
+// $input-btn-line-height: 1.2;
+// $input-color: $color-h;
+// $input-bg: $body-bg;
+// $input-btn-border-width: 1px;
+// $input-border-color: $color-h;
+// $input-border-radius: $border-radius;
+// $input-placeholder-color: $gray-900;
+// $input-disabled-bg: $gray-100;
+// $input-focus-box-shadow: 0 0 0 .2rem rgba(0, 81, 170, .3);
+// $input-box-shadow: 0 0 0 .2rem rgba(0, 81, 170, .3);
+
+/* .breadcrumb */
+
+$breadcrumb-padding-y: rem(1);
+$breadcrumb-padding-x: rem(0);
+$breadcrumb-bg: $white;
+// navbar
+$navbar-light-color: $gray-900 !default;
+$navbar-light-hover-color: $primary !default;
+$navbar-light-active-color: $primary !default;
+// $navbar-light-disabled-color:       rgba($black, .3) !default;
+// $navbar-light-toggler-icon-bg:      str-replace(url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='#{$navbar-light-color}' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e"), "#", "%23") !default;
+// $navbar-light-toggler-border-color: rgba($black, .1) !default;
+$navbar-padding-y: 0 !default;
+// $navbar-padding-x: $spacer !default;
+$navbar-brand-padding-y: 0 !default;
+$nav-link-padding-y: .5rem !default;
+// $nav-link-padding-x: 5rem !default;
+$navbar-nav-link-padding-x: 1rem !default;
+$navbar-light-toggler-border-color: transparent !default;
+$navbar-toggler-padding-y: .1rem !default;
+$navbar-toggler-padding-x: .1rem !default;
+// $navbar-toggler-font-size:          $font-size-lg !default;
+// $navbar-toggler-border-radius:      $btn-border-radius !default;
+// button
+$btn-border-radius: 0 !default;
+$btn-border-radius-lg: 0 !default;
+$btn-border-radius-sm: 0 !default;
+// Dropdowns
+//
+// Dropdown menu container and contents.
+$dropdown-min-width: 6rem !default;
+$dropdown-padding-y: 0 !default;
+$dropdown-spacer: 0 !default;
+$dropdown-bg: $gray-200 !default;
+$dropdown-border-color: transparent !default;
+$dropdown-border-radius: 0 !default;
+$dropdown-border-width: 0 !default;
+// $dropdown-inner-border-radius: calc(#{$dropdown-border-radius} - #{$dropdown-border-width}) !default;
+// $dropdown-divider-bg: $gray-200 !default;
+// $dropdown-box-shadow: 0 .5rem 1rem rgba($black, .175) !default;
+$dropdown-link-color: $gray-900 !default;
+$dropdown-link-hover-color: darken($gray-900, 5%) !default;
+$dropdown-link-hover-bg: $gray-300 !default;
+// $dropdown-link-active-color:        $component-active-color !default;
+// $dropdown-link-active-bg:           $component-active-bg !default;
+// $dropdown-link-disabled-color:      $gray-600 !default;
+// $dropdown-item-padding-y:           .25rem !default;
+$dropdown-item-padding-x: .25rem !default;
+// $dropdown-header-color:             $gray-600 !default;
+// forms
+// $input-padding-y-lg:                    $input-btn-padding-y-lg !default;
+// $input-padding-x-lg:                    $input-btn-padding-x-lg !default;
+// $input-font-size-lg:                    $input-btn-font-size-lg !default;
+// $input-line-height-lg:                  $input-btn-line-height-lg !default;
+$input-bg: $gray-200 !default;
+// $input-disabled-bg:                     $gray-200 !default;
+$input-color: $secondary !default;
+$input-border-color: $gray-500 !default;
+// $input-border-width:                    $input-btn-border-width !default;
+// $input-box-shadow:                      inset 0 1px 1px rgba($black, .075) !default;
+$input-border-radius: 0 !default;
+$input-border-radius-lg: 0 !default;
+$input-border-radius-sm: 0 !default;
+// $input-focus-bg:                        $input-bg !default;
+$input-focus-border-color: $gray-600 !default;
+// $input-focus-color:                     $input-color !default;
+// $input-focus-width:                     $input-btn-focus-width !default;
+// $input-focus-box-shadow:                $input-btn-focus-box-shadow !default;
+$input-placeholder-color: $gray-500 !default;
+// $input-plaintext-color:                 $body-color !default;
+$input-btn-focus-box-shadow: 0 0 0 0 transparent !default;
+// display
+// $display1-size:               6rem !default;
+// $display2-size:               5.5rem !default;
+// $display3-size:               4.5rem !default;
+$display4-size: 1.5rem !default;
+// $font-weight-lighter:         lighter !default;
+// $font-weight-light:           300 !default;
+// $font-weight-normal:          400 !default;
+$font-weight-bold: 900 !default;
+// $font-weight-bolder:          bolder !default;
+// Cards
+// $card-spacer-y:                     .75rem !default;
+$card-spacer-x: 0 !default;
+// $card-border-width:                 $border-width !default;
+// $card-border-radius:                $border-radius !default;
+$card-border-color: transparent !default;
+// $card-inner-border-radius:          calc(#{$card-border-radius} - #{$card-border-width}) !default;
+// $card-cap-bg:                       rgba($black, .03) !default;
+// $card-cap-color:                    inherit !default;
+// $card-bg:                           $white !default;
+// $card-img-overlay-padding:          1.25rem !default;
+// $card-group-margin:                 $grid-gutter-width / 2 !default;
+// $card-deck-margin:                  $card-group-margin !default;
+// $card-columns-count:                3 !default;
+// $card-columns-gap:                  1.25rem !default;
+// $card-columns-margin:               $card-spacer-y !default;
+// slider
+$slider-img-height: 20rem !default;

@@ -1,0 +1,6 @@
+// module 'Mode Banner'
+.mode-banner {
+    @include position($type: relative, $index: 1);
+    background-image: url("/assets/images/1t.png");
+    background-position: center center;
+}

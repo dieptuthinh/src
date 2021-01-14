@@ -1,0 +1,23 @@
+.nav-logo {
+    width: 10rem;
+    vertical-align: baseline;
+}
+
+.ic {
+    .icon {
+        width: 2rem;
+        height: .8rem;
+        background: {
+            size: contain;
+            position: center;
+            repeat: no-repeat;
+        }
+        transition: all .2s;
+    }
+    .icon-open {
+        background-image: url('/assets/images/nav-open.png');
+    }
+    .icon-close {
+        background-image: url('/assets/images/nav-close.png');
+    }
+}
